@@ -35,7 +35,7 @@ function addNumbers(num1, num2) {
  *
  */
 function sayGoodbye(name) {
-  return "Goodbye, " + name + ". Have a great day.";
+  return `Goodbye, ${name} Have a great day.`;
 }
 
 /**
@@ -119,7 +119,7 @@ function makePersonObject(id, name, email) {
  * the returned value should look like `Hello, my name is Leia`.
  */
 function getName(objectName) {
-  return "Hello, my name is " + objectName.name + ".";
+  return `Hello, my name is ${objectName.name}.`;
 }
 
 /**
@@ -227,14 +227,13 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
  */
 function getCarInfoByIndex(inventory, index) {
-const whichMake = inventory[index].car_make
+  const whichMake = inventory[index].car_make;
 
-const whichModel = inventory[index].car_model
+  const whichModel = inventory[index].car_model;
 
-return "This is a " + whichMake + " " + whichModel + ".";
-
+  // return "This is a " + whichMake + " " + whichModel + ".";
+  return `This is a ${whichMake} ${whichModel}.`;
 }
-
 /**
  * ### Challenge `getLastCarInfo`
  *
@@ -247,8 +246,13 @@ return "This is a " + whichMake + " " + whichModel + ".";
  * it will return `This is a Lincoln Town Car`.
  */
 function getLastCarInfo(inventory) {
-  /* code here */
+ let lastObj = inventory.slice(-1)[0]
+return `This is a ${lastObj.car_make + lastObj.car_model}`;
+
 }
+
+
+
 
 /**
  * ### Challenge `getModelYears`
@@ -260,31 +264,9 @@ function getLastCarInfo(inventory) {
  * getModelYears returns an array containing all the 'car_year's in the inventory.
  */
 function getModelYears(inventory) {
-  /* code here */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  const modelYears = inventory.car_year
+  console.log(modelYears);
+  }
 
 
 /**
