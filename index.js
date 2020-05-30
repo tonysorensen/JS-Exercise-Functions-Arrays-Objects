@@ -251,9 +251,6 @@ return `This is a ${lastObj.car_make + lastObj.car_model}`;
 
 }
 
-
-
-
 /**
  * ### Challenge `getModelYears`
  *
@@ -264,8 +261,15 @@ return `This is a ${lastObj.car_make + lastObj.car_model}`;
  * getModelYears returns an array containing all the 'car_year's in the inventory.
  */
 function getModelYears(inventory) {
-  const modelYears = inventory.car_year
-  console.log(modelYears);
+  const newArray = []
+  
+for(i=0; i<inventory.length; i++){
+  const modelYears = inventory[i].car_year
+  newArray.push(modelYears);
+}
+
+console.log(newArray);
+  // console.log(modelYears);
   }
 
 
