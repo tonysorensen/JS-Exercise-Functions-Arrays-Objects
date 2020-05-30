@@ -231,7 +231,7 @@ function getCarInfoByIndex(inventory, index) {
 
   const whichModel = inventory[index].car_model;
 
-  // return "This is a " + whichMake + " " + whichModel + ".";
+  
   return `This is a ${whichMake} ${whichModel}.`;
 }
 /**
@@ -250,6 +250,13 @@ function getLastCarInfo(inventory) {
 return `This is a ${lastObj.car_make + lastObj.car_model}`;
 
 }
+// let myArr = inventory[inventory.length-1]
+// console.log(myArr)
+//  will find nad console.log last item in array
+
+
+
+
 
 /**
  * ### Challenge `getModelYears`
@@ -268,8 +275,7 @@ for(i=0; i<inventory.length; i++){
   newArray.push(modelYears);
 }
 
-console.log(newArray);
-  // console.log(modelYears);
+return(newArray);
   }
 
 
@@ -287,8 +293,21 @@ console.log(newArray);
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
  */
-function getCarInfoById(/* code here */) {
-  /* code here */
+function getCarInfoById(inventory, id) {
+  const index = id - 1;
+
+  const whichMake = inventory[index].car_make;
+
+  const whichModel = inventory[index].car_model;
+
+//   for(i=0; i < inventory.length; i++){
+// if (id === inventory[i].id){
+//   console.log(inventory[i].car_make)
+// }
+
+//   }
+  
+  return `This is a ${whichMake} ${whichModel}.`;
 }
 
 /**
